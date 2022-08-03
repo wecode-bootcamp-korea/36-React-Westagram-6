@@ -1,1 +1,1 @@
-36기 6팀 초기 셋팅
+Westagram branch feature/36-minjaeJO
