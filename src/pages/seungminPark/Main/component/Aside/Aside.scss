@@ -1,0 +1,65 @@
+@import '/src/pages/seungminPark/styles/variables.scss';
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  top: 0;
+  margin: 36px 0 0 25px;
+  width: 320px;
+  .recommendSection {
+    .recommendMyProfile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 70px;
+
+      .recommendMyIcon {
+        width: 56px;
+        height: 56px;
+        background-image: url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png');
+        background-size: 50px;
+        background-position: 0 2px;
+        border: 3px solid black;
+        border-radius: 28px;
+      }
+      .recommendMyId {
+        width: 220px;
+
+        .recommendMyIdEng {
+          margin-bottom: 5px;
+          font-size: 14px;
+          font-weight: bolder;
+        }
+        .recommendMyIdKor {
+          color: $color-dark-wg;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+
+      .recommendMyProfileSwitch {
+        color: $color-blue-bt;
+        font-size: 12px;
+        font-weight: bolder;
+      }
+    }
+  }
+
+  .recommendForMe {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 15px 0;
+
+    .recommendForMeText {
+      color: $color-dark-li;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .recommendForMeAll {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+}

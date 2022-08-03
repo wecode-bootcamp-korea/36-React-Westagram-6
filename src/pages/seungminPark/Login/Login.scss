@@ -1,0 +1,95 @@
+@import '/src/pages/seungminPark/styles/variables.scss';
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $color-dark-wt;
+
+  #root {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+
+    .loginPageContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .loginContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 350px;
+        background-color: $color-light-wt;
+        border: 1px solid rgb($color-gray-gr, $color-gray-gr, $color-gray-gr);
+
+        .loginLogo {
+          height: 51px;
+          margin: 36px 0px;
+          background-color: $color-light-wt;
+          font-size: 45px;
+          font-family: 'Lobster', cursive;
+        }
+
+        .partitionSection {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          margin: 10px 40px 18px;
+          background-color: $color-light-wt;
+
+          .partitionText {
+            margin: 0 18px;
+            color: rgb($color-dark-gr, $color-dark-gr, $color-dark-gr);
+            background-color: $color-light-wt;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 15px;
+            white-space: nowrap;
+          }
+        }
+
+        .questionPassword {
+          margin-top: 12px;
+          margin-bottom: 20px;
+          color: $color-dark-bl;
+          background-color: $color-light-wt;
+          text-align: center;
+          line-height: 16px;
+          font-size: 12px;
+        }
+      }
+
+      .signinSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        margin: 15px 0px;
+        padding: 10px 0px;
+        color: $color-dark-gr;
+        background-color: $color-light-wt;
+        border: 1px solid rgb($color-gray-gr, $color-gray-gr, $color-gray-gr);
+        font-size: 14px;
+        text-align: center;
+
+        .signinText {
+          margin: 15px 0px;
+          background-color: $color-light-wt;
+        }
+        .signinLink {
+          margin-left: 5px;
+          color: $color-blue-bt;
+          background-color: $color-light-wt;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

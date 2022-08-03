@@ -1,7 +1,15 @@
 import React from 'react';
+import Posting from './component/Posting/Posting';
+import Aside from './component/Aside/Aside';
+import './Main.scss';
 
 const MainSeungmin = () => {
-  return <h1>Hello Wecode</h1>;
+  return (
+    <main className="mainPage">
+      <Posting />
+      <Aside />
+    </main>
+  );
 };
 
 export default MainSeungmin;

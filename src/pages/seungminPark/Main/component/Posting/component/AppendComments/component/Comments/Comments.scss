@@ -1,0 +1,29 @@
+@import '/src/pages/seungminPark/styles/variables.scss';
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  background-color: $color-light-wt;
+  font-size: 16px;
+
+  .commentBox {
+    .commentName {
+      font-weight: bold;
+      margin-right: 10px;
+      background-color: $color-light-wt;
+    }
+  }
+
+  .commentLike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: $color-light-wt;
+  }
+
+  .commnetLiked {
+    color: red;
+  }
+}
