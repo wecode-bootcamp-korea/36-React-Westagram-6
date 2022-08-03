@@ -15,7 +15,7 @@ import MainMinjae from './pages/minjaeJo/Main/Main';
 const Router = () => {
   return (
     <BrowserRouter>
-    <NavbarMain/>
+      <NavbarMain />
       <Routes>
         <Route path="/login-seungmin" element={<LoginSeungmin />} />
         <Route path="/main-seungmin" element={<MainSeungmin />} />

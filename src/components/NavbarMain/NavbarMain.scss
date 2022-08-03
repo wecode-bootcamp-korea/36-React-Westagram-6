@@ -1,4 +1,4 @@
-@import "../../styles/color.css";
+@import '../../styles/color.css';
 
 .navbar {
   position: fixed;
@@ -19,7 +19,7 @@
     .logo {
       width: 120px;
       height: 46px;
-      background-image: url("https://fontmeme.com/images/instagram-new-logo.png");
+      background-image: url('https://fontmeme.com/images/instagram-new-logo.png');
       background-size: 120px 45px;
       background-repeat: no-repeat;
     }
@@ -63,7 +63,7 @@
       &:nth-child(5) {
         width: 28px;
         height: 28px;
-        background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png");
+        background-image: url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png');
         background-color: var(--color-light-wt);
         background-size: 28px;
         background-repeat: no-repeat;
@@ -75,7 +75,7 @@
         margin-bottom: 2px;
         border: 2px solid black;
         border-radius: 20px;
-        background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png");
+        background-image: url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png');
         background-size: 28px;
         background-repeat: no-repeat;
         background-position: -2px 0px;
