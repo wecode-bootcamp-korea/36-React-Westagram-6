@@ -8,3 +8,23 @@
 a {
   text-decoration: none;
 }
+
+body {
+  width: 100vw;
+  background-color: whitesmoke;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+img {
+  object-fit: cover;
+}
