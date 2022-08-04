@@ -9,25 +9,25 @@ const MainBitna = () => {
       <nav className="nav">
         <div className="inner">
           <div className="logo">
-            <img src="/images/instagram.png" alt="insta logo" />
+            <img src="/images/bitnalee/instagram.png" alt="insta logo" />
             <a href="#">westargram</a>
           </div>
 
           <div className="search">
-            <img src="/images/serch.png" />
+            <img src="/images/bitnalee/serch.png" />
             <input type="text" placeholder="검색" />
           </div>
 
           <div className="utility">
             <div className="utilityBox">
               <a href="#" className="utilityicon">
-                <img src="./images/explore.png" alt="explore" />
+                <img src="./images/bitnalee/explore.png" alt="explore" />
               </a>
               <a href="#" className="utilityicon">
-                <img src="/images/heart.png" alt="like" />
+                <img src="/images/bitnalee/heart.png" alt="like" />
               </a>
               <a href="#" className="utilityicon">
-                <img src="/images/profile.png" alt="profile" />
+                <img src="/images/bitnalee/profile.png" alt="profile" />
               </a>
             </div>
           </div>
@@ -40,7 +40,7 @@ const MainBitna = () => {
             <article className="article">
               <div className="contentTop">
                 <div className="profileBox">
-                  <img src="/images/feedimg.jpeg" />
+                  <img src="/images/bitnalee/feedimg.jpeg" />
                   <div className="info">
                     <p className="title">Mardi Mercredi</p>
                     <p className="text">마르디</p>
@@ -54,29 +54,29 @@ const MainBitna = () => {
                 </button>
               </div>
 
-              <img src="/images/feedimg.jpeg" />
+              <img src="/images/bitnalee/feedimg.jpeg" />
 
               <div className="contentBottom">
                 <div className="contentIcon">
                   <div className="iconBox">
                     <button type="button">
-                      <img src="/images/like.png" />
+                      <img src="/images/bitnalee/like.png" />
                     </button>
                     <button type="button">
-                      <img src="/images/comment.png" />
+                      <img src="/images/bitnalee/comment.png" />
                     </button>
                     <button type="button">
-                      <img src="/images/dm.png" />
+                      <img src="/bitnalee/dm.png" />
                     </button>
                   </div>
 
                   <button type="button" className="link">
-                    <img src="/images/share.png" />
+                    <img src="/images/bitnalee/share.png" />
                   </button>
                 </div>
 
                 <div className="userBox">
-                  <img src="/images/feedimg.jpeg" />
+                  <img src="/images/bitnalee/feedimg.jpeg" />
                   <span className="text">
                     <strong>bitnalee</strong>님 외 <strong>486명</strong>이
                     좋아합니다.
@@ -91,7 +91,7 @@ const MainBitna = () => {
           <div className="main-right">
             <div className="myProfile">
               <div className="profileBox">
-                <img src="/images/feedimg.jpeg" />
+                <img src="/images/itnalee/feedimg.jpeg" />
                 <div className="info">
                   <p className="title">Mardi Mercredi</p>
                   <p className="text">마르디</p>

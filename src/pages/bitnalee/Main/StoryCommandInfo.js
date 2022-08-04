@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const StoryCommandInfo = function () {
   return (
     <div className="profileBox">
-      <img src="/images/feedimg.jpeg" />
+      <img src="/images/bitnalee/feedimg.jpeg" />
       <div className="info">
         <p className="title">Mardi Mercredi</p>
         <p className="text">마르디</p>
