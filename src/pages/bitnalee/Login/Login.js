@@ -8,18 +8,22 @@ const LoginBitna = () => {
   const [id, idValue] = useState('');
   const [pw, pwValue] = useState('');
   function saveUserld(e) {
-    idValue(test);
+    // 버튼 활성화 함수
+    idValue(e.target.value);
     pwValue(e.target.value);
+
     if (idValue.length >= 5 && pwValue.length >= 5) {
       setVal('활성');
     } else {
       setVal('비활성');
     }
   }
+  // 클릭시 메인페이지 이동 함수
   const navigate = useNavigate();
   const goToMain = () => {
     navigate('/main');
   };
+
   return (
     <div className="login">
       <article className="article">
@@ -29,14 +33,8 @@ const LoginBitna = () => {
             type="text"
             id="id"
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            // onChange={saveUserld}
           />
-          <input
-            type="password"
-            id="pw"
-            placeholder="비밀번호"
-            // onChange={saveUserld}
-          />
+          <input type="password" id="pw" placeholder="비밀번호" />
           <button
             type="button"
             id="button"
