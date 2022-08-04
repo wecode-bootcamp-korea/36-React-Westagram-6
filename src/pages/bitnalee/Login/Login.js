@@ -15,6 +15,10 @@ const LoginBitna = () => {
     // 아이디 비밀번호 기준 충족시, 로그인 버튼 활성화 시킬 함수
     id.length > 5 && pw.length > 5 ? setVal(false) : setVal(true);
   }
+  const navigate = useNavigate();
+  const goTomain = () => {
+    navigate('./main-bitna');
+  };
 
   return (
     <div className="login">
@@ -33,7 +37,7 @@ const LoginBitna = () => {
             id="pw"
             placeholder="비밀번호"
           />
-          <button disabled={val} type="button" id="button">
+          <button disabled={val} type="button" id="button" onClick={goTomain}>
             로그인
           </button>
         </div>
