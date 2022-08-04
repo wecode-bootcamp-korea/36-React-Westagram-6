@@ -39,13 +39,14 @@ const LoginBitna = () => {
             placeholder="비밀번호"
             onChange={saveUserld}
           />
-          {/* <button
+          <button
             type="button"
             id="button"
             disabled={val == '활성' ? false : true}
-            onClick={goToMain}>
+            onClick={goToMain}
+          >
             로그인
-          </button> */}
+          </button>
         </div>
         <div className="forget">
           <a href="#">비밀번호를 잊으셨나요?</a>
