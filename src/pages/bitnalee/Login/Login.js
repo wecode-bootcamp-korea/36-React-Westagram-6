@@ -17,7 +17,7 @@ const LoginBitna = () => {
   }
   const navigate = useNavigate();
   const goTomain = () => {
-    navigate('./main-bitna');
+    navigate('/main-bitna');
   };
 
   return (
