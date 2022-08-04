@@ -2,8 +2,19 @@ import React, { useState } from 'react';
 import './Main.scss';
 import CommentBox from './CommentBox';
 import StoryCommand from './StoryCommand';
+import Comment from './Comment';
+// import Comment from './Comment';
 
 const MainBitna = () => {
+  const [commentArr, setCommentArr] = useState([]);
+
+  function addComnnet(data) {
+    setCommentArr(prevData => {
+      return [...prevData, data];
+    });
+    console.log(commentArr);
+  }
+
   return (
     <div>
       <nav className="nav">
@@ -12,6 +23,8 @@ const MainBitna = () => {
             <img src="/images/bitnalee/instagram.png" alt="insta logo" />
             <a href="#">westargram</a>
           </div>
+
+          {console.log(commentArr)}
 
           <div className="search">
             <img src="/images/bitnalee/serch.png" />
@@ -81,10 +94,14 @@ const MainBitna = () => {
                     <strong>bitnalee</strong>님 외 <strong>486명</strong>이
                     좋아합니다.
                   </span>
-                  <ul className="addUl"></ul>
+                  <ul className="addUl">
+                    {commentArr.map(function (item, idx) {
+                      return <Comment text={item} key={idx} />;
+                    })}
+                  </ul>
                 </div>
 
-                <CommentBox />
+                <CommentBox updateData={addComnnet} />
               </div>
             </article>
           </div>
@@ -98,7 +115,6 @@ const MainBitna = () => {
                 </div>
               </div>
             </div>
-
             <StoryCommand />
             <StoryCommand />
           </div>

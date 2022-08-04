@@ -27,6 +27,7 @@
         position: relative;
         margin-left: 28px;
         font-size: 30px;
+        color: #000;
 
         &::before {
           content: '';
@@ -132,6 +133,10 @@
     .contentBottom {
       margin-top: 10px;
 
+      strong {
+        font-weight: bold;
+      }
+
       .contentIcon {
         display: flex;
         flex-direction: row;
@@ -175,6 +180,20 @@
         height: 30px;
         border: 1px solid #ccc;
         border-radius: 50%;
+        vertical-align: middle;
+      }
+      .addUl {
+        padding: 20px 8px;
+        & > div {
+          padding: 3px 0;
+        }
+        strong {
+          padding-right: 5px;
+        }
+      }
+      .text {
+        padding-left: 10px;
+        vertical-align: middle;
       }
     }
 
