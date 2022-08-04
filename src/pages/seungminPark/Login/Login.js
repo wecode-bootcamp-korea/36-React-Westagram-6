@@ -5,7 +5,7 @@ import PartitionLine from './component/PartitionLine/PartitionLine';
 
 const LoginSeungmin = () => {
   return (
-    <main className="loginPageContainer">
+    <main className="loginSeungmin">
       <section className="loginContainer">
         <header className="loginLogo">westagram</header>
         <LoginComponent />

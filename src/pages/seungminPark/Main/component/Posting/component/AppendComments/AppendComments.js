@@ -27,7 +27,7 @@ const AppendComments = () => {
 
   return (
     <>
-      <ul className="feedComments">
+      <ul className="appendComments">
         {commentArray.map((textValue, index) => (
           <Comments value={textValue} key={index} />
         ))}

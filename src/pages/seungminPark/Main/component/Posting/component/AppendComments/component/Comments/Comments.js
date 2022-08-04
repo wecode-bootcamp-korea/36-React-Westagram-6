@@ -10,7 +10,7 @@ const Comments = ({ value, key }) => {
   };
 
   return (
-    <li key={key} className="comment" onClick={like}>
+    <li key={key} className="comments" onClick={like}>
       <div className="commentBox">
         <span className="commentName">Me</span>
         {value}

@@ -3,7 +3,7 @@ import './AsideFooter.scss';
 
 const AsideFooter = () => {
   return (
-    <footer className="recommendFooter">
+    <footer className="asideFooter">
       <div className="recommendedFooterWrap">
         <ul>
           <li>소개</li>

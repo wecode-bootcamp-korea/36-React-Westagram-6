@@ -3,7 +3,7 @@ import './Recommend.scss';
 
 const Recommend = () => {
   return (
-    <div className="recommendedProfile">
+    <div className="recommend">
       <div className="recommendedIcon" />
       <div className="recommendedId">
         <p className="recommendedIdEng">baghyeonjis</p>

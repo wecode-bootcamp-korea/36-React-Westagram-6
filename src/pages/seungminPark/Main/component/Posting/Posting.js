@@ -10,7 +10,7 @@ const Posting = () => {
   };
 
   return (
-    <article className="post">
+    <article className="posting">
       <section className="postNew">
         <div className="postNewProfile">
           <div className="postNewProfileIcon" />

@@ -5,7 +5,7 @@ import './Main.scss';
 
 const MainSeungmin = () => {
   return (
-    <main className="mainPage">
+    <main className="mainSeungmin">
       <Posting />
       <Aside />
     </main>

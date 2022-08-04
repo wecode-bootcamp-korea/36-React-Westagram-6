@@ -45,7 +45,7 @@ const LoginComponent = () => {
         setPw(''));
 
   return (
-    <form className="loginInput">
+    <form className="loginComponent">
       <input
         type="text"
         id="id"
