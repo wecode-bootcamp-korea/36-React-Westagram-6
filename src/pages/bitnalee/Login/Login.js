@@ -16,9 +16,7 @@ const LoginBitna = () => {
       setVal('비활성');
     }
   }
-  // 2
   const navigate = useNavigate();
-  // 3
   const goToMain = () => {
     navigate('/main');
   };
@@ -31,13 +29,13 @@ const LoginBitna = () => {
             type="text"
             id="id"
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            onChange={saveUserld}
+            // onChange={saveUserld}
           />
           <input
             type="password"
             id="pw"
             placeholder="비밀번호"
-            onChange={saveUserld}
+            // onChange={saveUserld}
           />
           <button
             type="button"

@@ -66,7 +66,7 @@ const MainBitna = () => {
                       <img src="/images/bitnalee/comment.png" />
                     </button>
                     <button type="button">
-                      <img src="/bitnalee/dm.png" />
+                      <img src="images/bitnalee/dm.png" />
                     </button>
                   </div>
 
@@ -91,7 +91,7 @@ const MainBitna = () => {
           <div className="main-right">
             <div className="myProfile">
               <div className="profileBox">
-                <img src="/images/itnalee/feedimg.jpeg" />
+                <img src="/images/bitnalee/feedimg.jpeg" />
                 <div className="info">
                   <p className="title">Mardi Mercredi</p>
                   <p className="text">마르디</p>
