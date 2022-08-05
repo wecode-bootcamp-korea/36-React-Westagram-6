@@ -17,7 +17,7 @@ const MainBitna = () => {
 
   return (
     <div>
-      {NavbarMain}
+      <NavbarMain />
 
       <main className="main">
         <div className="wrap">
