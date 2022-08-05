@@ -17,7 +17,7 @@ const MainBitna = () => {
 
   return (
     <div>
-      <nav className="nav">
+      {/* <nav className="nav">
         <div className="inner">
           <div className="logo">
             <img src="/images/bitnalee/instagram.png" alt="insta logo" />
@@ -45,7 +45,7 @@ const MainBitna = () => {
             </div>
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       <main className="main">
         <div className="wrap">

@@ -8,7 +8,7 @@ const StoryCommandInfo = function () {
     <div className="profileBox">
       <img src="/images/bitnalee/feedimg.jpeg" />
       <div className="info">
-        <p className="title">Mari Mercredi</p>
+        <p className="title">Mardi Mercredi</p>
         <p className="text">마르디</p>
       </div>
     </div>
