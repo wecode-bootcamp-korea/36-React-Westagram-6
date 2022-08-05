@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './Login.scss';
-import { Link, Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 const LoginBitna = () => {
   const [id, idValue] = useState('');
@@ -42,7 +40,7 @@ const LoginBitna = () => {
           </button>
         </div>
         <div className="forget">
-          <a href="#">비밀번호를 잊으셨나요?</a>
+          <a href="https://bitnaleeeee.github.io/">비밀번호를 잊으셨나요?</a>
         </div>
       </article>
     </div>

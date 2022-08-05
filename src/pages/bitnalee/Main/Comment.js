@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // 댓글 엘리먼트, 부모한테 댓글을 받아옴
-const Comment = prop => {
+const Comment = props => {
   return (
     <div>
       <strong>bitnalee</strong>
-      {prop.text}
+      {props.text}
     </div>
   );
 };
