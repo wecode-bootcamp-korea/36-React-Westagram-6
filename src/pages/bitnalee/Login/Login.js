@@ -6,14 +6,10 @@ let idLength = 0;
 let pwLength = 0;
 
 const LoginBitna = () => {
-  const [id, idValue] = useState('');
-  const [pw, pwValue] = useState('');
   const [val, setVal] = useState(true);
 
   // 아아디 비밀번호 데이터 전달 함수
   function saveUserld(e) {
-    e.target.id === 'id' ? idValue(e.target.value) : pwValue(e.target.value);
-
     // 아이디, 패스워드 입력값 길이
     if (e.target.id === 'id') {
       idLength = e.target.value.length;

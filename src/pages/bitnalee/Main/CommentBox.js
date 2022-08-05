@@ -3,6 +3,7 @@ import './CommentBox.scss';
 
 const CommentBox = props => {
   const [text, setText] = useState('');
+  const { updateData } = props;
 
   // 인풋에 입력할때마다 내용이 text 변수에 담김
   function changeComment(e) {
@@ -16,7 +17,7 @@ const CommentBox = props => {
 
   // 게시를 누르면 콘솔로그에 입력했던 내용이 나옴
   function clickComment(e) {
-    props.updateData(text);
+    updateData(text);
     setText('');
   }
 
