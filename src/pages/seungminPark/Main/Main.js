@@ -1,14 +1,18 @@
 import React from 'react';
 import Posting from './component/Posting/Posting';
 import Aside from './component/Aside/Aside';
+import NavbarMain from '../../../components/NavbarMain/NavbarMain';
 import './Main.scss';
 
 const MainSeungmin = () => {
   return (
-    <main className="mainSeungmin">
-      <Posting />
-      <Aside />
-    </main>
+    <>
+      <NavbarMain />
+      <main className="mainSeungmin">
+        <Posting />
+        <Aside />
+      </main>
+    </>
   );
 };
 
