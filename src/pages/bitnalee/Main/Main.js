@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import NavbarMain from '../../../components/NavbarMain/NavbarMain';
 import './Main.scss';
 import CommentBox from './CommentBox';
 import StoryCommand from './StoryCommand';
@@ -17,35 +18,7 @@ const MainBitna = () => {
 
   return (
     <div>
-      {/* <nav className="nav">
-        <div className="inner">
-          <div className="logo">
-            <img src="/images/bitnalee/instagram.png" alt="insta logo" />
-            <a href="#">westargram</a>
-          </div>
-
-          {console.log(commentArr)}
-
-          <div className="search">
-            <img src="/images/bitnalee/serch.png" />
-            <input type="text" placeholder="검색" />
-          </div>
-
-          <div className="utility">
-            <div className="utilityBox">
-              <a href="#" className="utilityicon">
-                <img src="./images/bitnalee/explore.png" alt="explore" />
-              </a>
-              <a href="#" className="utilityicon">
-                <img src="/images/bitnalee/heart.png" alt="like" />
-              </a>
-              <a href="#" className="utilityicon">
-                <img src="/images/bitnalee/profile.png" alt="profile" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav> */}
+      {NavbarMain}
 
       <main className="main">
         <div className="wrap">
