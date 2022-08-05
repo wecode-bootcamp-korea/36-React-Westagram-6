@@ -13,7 +13,6 @@ const MainBitna = () => {
     setCommentArr(prevData => {
       return [...prevData, data];
     });
-    console.log(commentArr);
   }
 
   return (
@@ -26,7 +25,7 @@ const MainBitna = () => {
             <article className="article">
               <div className="contentTop">
                 <div className="profileBox">
-                  <img src="/images/bitnalee/feedimg.jpeg" />
+                  <img src="/images/bitnalee/feedimg.jpeg" alt="" />
                   <div className="info">
                     <p className="title">Mardi Mercredi</p>
                     <p className="text">마르디</p>
@@ -34,35 +33,35 @@ const MainBitna = () => {
                 </div>
 
                 <button className="rightButton">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                  <span />
+                  <span />
+                  <span />
                 </button>
               </div>
 
-              <img src="/images/bitnalee/feedimg.jpeg" />
+              <img src="/images/bitnalee/feedimg.jpeg" alt="" />
 
               <div className="contentBottom">
                 <div className="contentIcon">
                   <div className="iconBox">
                     <button type="button">
-                      <img src="/images/bitnalee/like.png" />
+                      <img src="/images/bitnalee/like.png" alt="" />
                     </button>
                     <button type="button">
-                      <img src="/images/bitnalee/comment.png" />
+                      <img src="/images/bitnalee/comment.png" alt="" />
                     </button>
                     <button type="button">
-                      <img src="images/bitnalee/dm.png" />
+                      <img src="images/bitnalee/dm.png" alt="" />
                     </button>
                   </div>
 
                   <button type="button" className="link">
-                    <img src="/images/bitnalee/share.png" />
+                    <img src="/images/bitnalee/share.png" alt="" />
                   </button>
                 </div>
 
                 <div className="userBox">
-                  <img src="/images/bitnalee/feedimg.jpeg" />
+                  <img src="/images/bitnalee/feedimg.jpeg" alt="" />
                   <span className="text">
                     <strong>bitnalee</strong>님 외 <strong>486명</strong>이
                     좋아합니다.
@@ -81,7 +80,7 @@ const MainBitna = () => {
           <div className="main-right">
             <div className="myProfile">
               <div className="profileBox">
-                <img src="/images/bitnalee/feedimg.jpeg" />
+                <img src="/images/bitnalee/feedimg.jpeg" alt="" />
                 <div className="info">
                   <p className="title">Mardi Mercredi</p>
                   <p className="text">마르디</p>

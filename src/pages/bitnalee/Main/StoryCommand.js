@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './StoryCommand.scss';
-import { Link, Navigate } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 import './StoryCommandInfo';
 import StoryCommandInfo from './StoryCommandInfo';
 
