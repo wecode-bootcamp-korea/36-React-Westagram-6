@@ -7,17 +7,20 @@ const Main = () => {
   const [commentList, setCommentList] = useState([]);
   const postActive = comment.length > 0;
 
-  const commentInput = e => {
+  const inputComment = e => {
     setComment(e.target.value);
   };
 
-  const commentSubmit = e => {
+  const addComment = e => {
     e.preventDefault();
-    const copyCommentList = commentList;
-    copyCommentList.push(comment);
-    setCommentList(copyCommentList);
+    //const copyCommentList = commentList;
+    //copyCommentList.push(comment);
+    setCommentList([...commentList, comment]);
     setComment('');
+    //console.log('카피리스트', copyCommentList);
   };
+
+  console.log('진짜리스트', commentList);
 
   return (
     <>
@@ -87,8 +90,8 @@ const Main = () => {
             </div>
 
             <ul className="feed__comment-list">
-              {commentList.map((text, i) => {
-                return <Comment userComment={text} key={i} />;
+              {commentList.map((comment, i) => {
+                return <Comment comment={comment} key={i} />;
               })}
             </ul>
 
@@ -98,14 +101,14 @@ const Main = () => {
                 type="text"
                 placeholder="댓글 달기..."
                 value={comment}
-                onChange={commentInput}
+                onChange={inputComment}
               />
               <input
                 className="comment__submit"
                 type="submit"
                 value="게시"
                 disabled={postActive ? false : true}
-                onClick={commentSubmit}
+                onClick={addComment}
               />
             </form>
           </article>

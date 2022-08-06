@@ -7,7 +7,7 @@ const Comment = props => {
       <div className="feed__comment--content">
         <div>
           <span className="user-ID">JMJ</span>
-          <span className="comment__text">{props.userComment}</span>
+          <span className="comment__text">{props.comment}</span>
         </div>
         <button>
           <i className="far fa-heart" />
