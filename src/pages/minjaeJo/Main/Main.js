@@ -1,6 +1,24 @@
+import React, { useState } from 'react';
+import Comment from '../../../components/Comment/Comment';
 import './Main.scss';
 
 const Main = () => {
+  const [comment, setComment] = useState('');
+  const [commentList, setCommentList] = useState([]);
+  const postActive = comment.length > 0;
+
+  const commentInput = e => {
+    setComment(e.target.value);
+  };
+
+  const commentSubmit = e => {
+    e.preventDefault();
+    const copyCommentList = commentList;
+    copyCommentList.push(comment);
+    setCommentList(copyCommentList);
+    setComment('');
+  };
+
   return (
     <>
       <div className="nav">
@@ -69,44 +87,25 @@ const Main = () => {
             </div>
 
             <ul className="feed__comment-list">
-              <li className="feed__comment">
-                <div className="feed__comment--content">
-                  <div>
-                    <span className="user-ID">RYAN</span>
-                    <span className="comment__text">위코드 좋긴한데</span>
-                  </div>
-                  <button>
-                    <i className="far fa-heart" />
-                  </button>
-                </div>
-                <span className="time-stamp">1분 전</span>
-              </li>
-
-              <li className="feed__comment">
-                <div className="feed__comment--content">
-                  <div>
-                    <span className="user-ID">NEO</span>
-                    <span className="comment__text">영혼 갈려나가는 중</span>
-                  </div>
-                  <button>
-                    <i className="far fa-heart" />
-                  </button>
-                </div>
-                <span className="time-stamp">3분 전</span>
-              </li>
+              {commentList.map((text, i) => {
+                return <Comment userComment={text} key={i} />;
+              })}
             </ul>
 
             <form className="comment-form">
               <input
-                className="comment-form__input"
+                className="comment__input"
                 type="text"
                 placeholder="댓글 달기..."
+                value={comment}
+                onChange={commentInput}
               />
               <input
-                className="comment-form__submit submit-disabled"
+                className="comment__submit"
                 type="submit"
-                disabled="disabled"
                 value="게시"
+                disabled={postActive ? false : true}
+                onClick={commentSubmit}
               />
             </form>
           </article>

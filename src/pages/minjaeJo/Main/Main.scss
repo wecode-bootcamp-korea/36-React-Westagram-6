@@ -248,7 +248,7 @@ $grey-50: rgba(0, 0, 0, 0.5);
       .comment-form {
         border-top: 1px solid $grey-10;
 
-        .comment-form__input {
+        .comment__input {
           width: 90%;
           height: 40px;
           outline: none;
@@ -256,7 +256,7 @@ $grey-50: rgba(0, 0, 0, 0.5);
           padding-left: 15px;
         }
 
-        .comment-form__submit {
+        .comment__submit {
           border: none;
           background-color: inherit;
           color: blue;

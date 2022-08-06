@@ -9,13 +9,16 @@ const Login = () => {
   const saveUserId = event => {
     setId(event.target.value);
   };
+
   const saveUserPw = event => {
     setPw(event.target.value);
   };
 
+  const validationLogin = Id.includes('@') && Pw.length >= 5;
+
   const navigate = useNavigate();
 
-  const goMain = () => {
+  const goToMain = () => {
     navigate('/main-minjae');
   };
 
@@ -27,20 +30,19 @@ const Login = () => {
           id="input_id"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
-          //value={Id}
           onChange={saveUserId}
         />
         <input
           id="input_password"
           type="password"
           placeholder="비밀번호"
-          //value={Pw}
           onChange={saveUserPw}
         />
         <button
           id="login_btn"
-          className="login_btn-disabled"
-          disabled="disabled"
+          disabled={validationLogin ? false : true}
+          className={validationLogin ? 'loginYes' : 'loginNo'}
+          onClick={goToMain}
         >
           로그인
         </button>

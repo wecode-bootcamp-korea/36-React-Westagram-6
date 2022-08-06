@@ -54,12 +54,12 @@ $grey-50: rgba(0, 0, 0, 0.5);
       margin-top: 10px;
     }
 
-    .login_btn-disabled {
-      opacity: 0.1;
+    .loginYes {
+      opacity: 1;
     }
 
-    .login_btn-abled {
-      opacity: 1;
+    .loginNo {
+      opacity: 0.1;
     }
 
     a {
