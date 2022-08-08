@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavbarMain from '../../../components/NavbarMain/NavbarMain';
 import './Main.scss';
 import CommentBox from './CommentBox';
@@ -29,6 +29,16 @@ const MainBitna = () => {
       return [...prevData, data];
     });
   }
+  const [feedList, setFeedList] = useState([]);
+  useEffect(() => {
+    fetch('/data/bitnaData.json')
+      .then(response => {
+        return response.json();
+      })
+      .then(result => {
+        setFeedList(result);
+      });
+  }, []);
 
   return (
     <div>
@@ -36,62 +46,68 @@ const MainBitna = () => {
 
       <main className="main">
         <div className="wrap">
-          <div className="feeds">
-            <article className="article">
-              <div className="contentTop">
-                <div className="profileBox">
-                  <img src="/images/bitnalee/feedimg.jpeg" alt="" />
-                  <div className="info">
-                    <p className="title">Mardi Mercredi</p>
-                    <p className="text">마르디</p>
-                  </div>
-                </div>
+          {feedList.map((item, idx) => {
+            return (
+              <div className="feeds">
+                {console.log(item)}
+                <article className="article">
+                  <div className="contentTop">
+                    <div className="profileBox">
+                      <img src={item.profileImg} alt="" />
+                      <div className="info">
+                        <p className="title">{item.profileTitle}</p>
+                        <p className="text">{item.profileName}</p>
+                      </div>
+                    </div>
 
-                <button className="rightButton">
-                  <span />
-                  <span />
-                  <span />
-                </button>
-              </div>
-
-              <img src="/images/bitnalee/feedimg.jpeg" alt="" />
-
-              <div className="contentBottom">
-                <div className="contentIcon">
-                  <div className="iconBox">
-                    <button type="button">
-                      <img src="/images/bitnalee/like.png" alt="" />
-                    </button>
-                    <button type="button">
-                      <img src="/images/bitnalee/comment.png" alt="" />
-                    </button>
-                    <button type="button">
-                      <img src="images/bitnalee/dm.png" alt="" />
+                    <button className="rightButton">
+                      <span />
+                      <span />
+                      <span />
                     </button>
                   </div>
 
-                  <button type="button" className="link">
-                    <img src="/images/bitnalee/share.png" alt="" />
-                  </button>
-                </div>
+                  <img src={item.feedImg} alt="" />
 
-                <div className="userBox">
-                  <img src="/images/bitnalee/feedimg.jpeg" alt="" />
-                  <span className="text">
-                    <strong>bitnalee</strong>님 외 <strong>486명</strong>이
-                    좋아합니다.
-                  </span>
-                  <ul className="addUl">
-                    {commentArr.map(function (item, idx) {
-                      return <Comment text={item} key={idx} />;
-                    })}
-                  </ul>
-                </div>
+                  <div className="contentBottom">
+                    <div className="contentIcon">
+                      <div className="iconBox">
+                        <button type="button">
+                          <img src="/images/bitnalee/like.png" alt="" />
+                        </button>
+                        <button type="button">
+                          <img src="/images/bitnalee/comment.png" alt="" />
+                        </button>
+                        <button type="button">
+                          <img src="images/bitnalee/dm.png" alt="" />
+                        </button>
+                      </div>
 
-                <CommentBox updateData={addComnnet} />
+                      <button type="button" className="link">
+                        <img src="/images/bitnalee/share.png" alt="" />
+                      </button>
+                    </div>
+
+                    <div className="userBox">
+                      <img src={item.userImg} alt="" />
+                      <span className="text">
+                        <strong>{item.userName}</strong>님 외{' '}
+                        <strong>{item.userLike}</strong>이 좋아합니다.
+                      </span>
+                      <ul className="addUl">
+                        {commentArr.map(function (item, idx) {
+                          return <Comment text={item} key={idx} />;
+                        })}
+                      </ul>
+                    </div>
+
+                    <CommentBox updateData={addComnnet} />
+                  </div>
+                </article>
               </div>
-            </article>
-          </div>
+            );
+          })}
+
           <div className="main-right">
             <div className="myProfile">
               <div className="profileBox">

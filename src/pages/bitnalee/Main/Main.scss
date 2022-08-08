@@ -82,6 +82,7 @@
   background: rgb(250, 250, 250);
 
   .wrap {
+    position: relative;
     margin: 70px auto 0;
     width: 800px;
 
@@ -92,6 +93,7 @@
     }
 
     .feeds {
+      margin-top: 20px;
       float: left;
       width: 500px;
       border: 1px solid #ccc;
@@ -198,7 +200,9 @@
     }
 
     .main-right {
-      float: right;
+      position: absolute;
+      top: 0;
+      right: 0;
       width: 270px;
       height: 600px;
 
