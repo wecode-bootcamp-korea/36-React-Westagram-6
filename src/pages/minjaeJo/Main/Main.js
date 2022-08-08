@@ -20,8 +20,6 @@ const Main = () => {
     //console.log('카피리스트', copyCommentList);
   };
 
-  console.log('진짜리스트', commentList);
-
   return (
     <>
       <div className="nav">
@@ -103,13 +101,14 @@ const Main = () => {
                 value={comment}
                 onChange={inputComment}
               />
-              <input
-                className="comment__submit"
+              <button
                 type="submit"
-                value="게시"
+                className={postActive ? 'submit-abled' : 'submit-disabled'}
                 disabled={postActive ? false : true}
                 onClick={addComment}
-              />
+              >
+                게시
+              </button>
             </form>
           </article>
         </div>
@@ -184,7 +183,7 @@ const Main = () => {
             </ul>
           </div>
 
-          <div className="recommandation__container">
+          <div className="recommendation__container">
             <div className="container__header">
               <span>회원님을 위한 추천</span>
               <button>모두 보기</button>

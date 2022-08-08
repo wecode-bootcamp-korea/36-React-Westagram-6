@@ -11,7 +11,6 @@ import MainBitna from './pages/bitnalee/Main/Main';
 
 import LoginMinjae from './pages/minjaeJo/Login/Login';
 import MainMinjae from './pages/minjaeJo/Main/Main';
-import CommentMinjae from '../src/components/Comment/Comment';
 
 const Router = () => {
   return (

@@ -256,17 +256,17 @@ $grey-50: rgba(0, 0, 0, 0.5);
           padding-left: 15px;
         }
 
-        .comment__submit {
+        .submit-disabled {
           border: none;
           background-color: inherit;
           color: blue;
-        }
-
-        .submit-disabled {
           opacity: 0.2;
         }
 
         .submit-abled {
+          border: none;
+          background-color: inherit;
+          color: blue;
           opacity: 1;
         }
       }
@@ -333,7 +333,7 @@ $grey-50: rgba(0, 0, 0, 0.5);
       }
     }
 
-    .recommandation__container {
+    .recommendation__container {
       background-color: white;
       border: 1px solid $grey-10;
       border-radius: 2px;
