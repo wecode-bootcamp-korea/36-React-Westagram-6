@@ -6,6 +6,21 @@ import StoryCommand from './StoryCommand';
 import Comment from './Comment';
 // import Comment from './Comment';
 
+const array = [
+  '소개',
+  '도움말',
+  '홍보 센터',
+  'API',
+  '채용 정보',
+  '개인정보처리방침',
+  '약관',
+  '위치',
+  '인기',
+  '계정',
+  '해시태그',
+  '언어',
+];
+
 const MainBitna = () => {
   const [commentArr, setCommentArr] = useState([]);
 
@@ -92,6 +107,13 @@ const MainBitna = () => {
           </div>
         </div>
       </main>
+      <footer className="footer">
+        <ul>
+          {array.map((item, idx) => {
+            return <li key={idx}> {item}</li>;
+          })}
+        </ul>
+      </footer>
     </div>
   );
 };
