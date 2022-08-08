@@ -228,21 +228,6 @@ $grey-50: rgba(0, 0, 0, 0.5);
 
       .feed__comment-list {
         padding: 0 15px;
-
-        .feed__comment {
-          margin-bottom: 5px;
-
-          .feed__comment--content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            .comment__text {
-              font-size: 14px;
-              margin: 0 10px;
-            }
-          }
-        }
       }
 
       .comment-form {
@@ -382,17 +367,6 @@ $grey-50: rgba(0, 0, 0, 0.5);
       span {
         font-size: 14px;
         color: $grey-50;
-      }
-    }
-
-    footer {
-      color: $grey-30;
-      font-size: 13px;
-      text-align: left;
-
-      p {
-        margin-bottom: 10px;
-        line-height: 1.3;
       }
     }
   }

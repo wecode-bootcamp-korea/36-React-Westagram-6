@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Comment from '../../../components/Comment/Comment';
+import Footer from '../../../components/Footer/Footer';
 import './Main.scss';
 
 const Main = () => {
@@ -13,11 +14,8 @@ const Main = () => {
 
   const addComment = e => {
     e.preventDefault();
-    //const copyCommentList = commentList;
-    //copyCommentList.push(comment);
     setCommentList([...commentList, comment]);
     setComment('');
-    //console.log('카피리스트', copyCommentList);
   };
 
   return (
@@ -84,7 +82,6 @@ const Main = () => {
             <div className="feed__info">
               <span className="user-ID">JORDY</span>
               <span className="feed__text">본가 가고 싶어...</span>
-              <button>더 보기</button>
             </div>
 
             <ul className="feed__comment-list">
@@ -240,15 +237,7 @@ const Main = () => {
             </ul>
           </div>
 
-          <footer>
-            <p>
-              Westagram 정보 &middot; 지원 &middot; 홍보 센터 &middot; API
-              &middot; <br />
-              채용 정보 &middot; 개인정보처리방침 &middot; 약관 &middot; <br />
-              디렉터리 &middot; 프로필 &middot; 해시태그 &middot; 언어
-            </p>
-            <span>@ 2022 WESTAGRAM</span>
-          </footer>
+          <Footer />
         </aside>
       </main>
     </>

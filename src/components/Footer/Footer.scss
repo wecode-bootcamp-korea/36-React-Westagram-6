@@ -1,0 +1,23 @@
+$grey-30: rgba(0, 0, 0, 0.3);
+
+footer {
+  color: $grey-30;
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    color: $grey-30;
+    font-size: 14px;
+
+    li {
+      margin-right: 15px;
+    }
+  }
+
+  span {
+    font-size: 15px;
+  }
+}
