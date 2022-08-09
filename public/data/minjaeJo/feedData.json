@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "userID": "JORDY",
+    "userImg": "/images/minjaeJo/JORDY.jpeg",
+    "feedImg": "/images/minjaeJo/JORDY_hometown.jpg",
+    "feedText": "집에 가고 싶어..."
+  },
+  {
+    "id": 2,
+    "userID": "죠르디",
+    "userImg": "/images/minjaeJo/JORDY.jpeg",
+    "feedImg": "/images/minjaeJo/JORDY_hometown.jpg",
+    "feedText": "우리 집은 남극이얌"
+  }
+]

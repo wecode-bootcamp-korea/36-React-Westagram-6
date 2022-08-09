@@ -1,22 +1,21 @@
-import React, { useState } from 'react';
-import Comment from '../../../components/Comment/Comment';
+import React, { useState, useEffect } from 'react';
+import Feed from '../../../components/Feed/Feed';
 import Footer from '../../../components/Footer/Footer';
 import './Main.scss';
 
 const Main = () => {
-  const [comment, setComment] = useState('');
-  const [commentList, setCommentList] = useState([]);
-  const postActive = comment.length > 0;
+  const [feedList, setFeedList] = useState([]);
 
-  const inputComment = e => {
-    setComment(e.target.value);
-  };
-
-  const addComment = e => {
-    e.preventDefault();
-    setCommentList([...commentList, comment]);
-    setComment('');
-  };
+  useEffect(() => {
+    fetch('http://localhost:3000/data/minjaeJo/feedData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        setFeedList(data);
+        console.log(data);
+      });
+  }, []);
 
   return (
     <>
@@ -43,71 +42,13 @@ const Main = () => {
           </div>
         </nav>
       </div>
+
       <main className="main">
         <div className="feeds">
-          <article className="feed">
-            <div className="feed__header">
-              <div className="feed__user">
-                <img
-                  className="profile-img"
-                  src="/images/minjaeJo/JORDY.jpeg"
-                  alt="죠르디"
-                />
-                <span className="user-ID feed_user-ID">JORDY</span>
-              </div>
-              <i className="fas fa-ellipsis-h" />
-            </div>
-
-            <div className="feed__img">
-              <img alt="남극" src="/images/minjaeJo/JORDY_hometown.jpg" />
-            </div>
-
-            <div className="feed__btns">
-              <div className="feed__btns--box">
-                <i id="red-heart" className="fas fa-heart" />
-                <i className="far fa-comment" />
-                <i className="far fa-paper-plane" />
-              </div>
-              <i className="far fa-bookmark" />
-            </div>
-
-            <div className="feed__likes">
-              <img alt="JMJ프로필" src="/images/minjaeJo/JMJ_profile.webp" />
-              <span>
-                <span className="user-ID">JMJ</span>님 외
-                <span className="user-number"> 7명</span>이 좋아합니다
-              </span>
-            </div>
-
-            <div className="feed__info">
-              <span className="user-ID">JORDY</span>
-              <span className="feed__text">본가 가고 싶어...</span>
-            </div>
-
-            <ul className="feed__comment-list">
-              {commentList.map((comment, i) => {
-                return <Comment comment={comment} key={i} />;
-              })}
-            </ul>
-
-            <form className="comment-form">
-              <input
-                className="comment__input"
-                type="text"
-                placeholder="댓글 달기..."
-                value={comment}
-                onChange={inputComment}
-              />
-              <button
-                type="submit"
-                className={postActive ? 'submit-abled' : 'submit-disabled'}
-                disabled={postActive ? false : true}
-                onClick={addComment}
-              >
-                게시
-              </button>
-            </form>
-          </article>
+          {feedList.map((data, i) => {
+            const feed = feedList[i];
+            return <Feed feed={feed} key={feed.id} />;
+          })}
         </div>
 
         <aside className="main-right">
