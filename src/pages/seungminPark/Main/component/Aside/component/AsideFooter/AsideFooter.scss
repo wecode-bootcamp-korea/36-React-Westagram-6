@@ -1,0 +1,30 @@
+@import '/src/pages/seungminPark/styles/variables.scss';
+
+.asideFooter {
+  .recommendedFooterWrap {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin-top: 20px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        height: 15px;
+        margin: 0 3px;
+        color: $color-gray-wg;
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .footerCorp {
+    height: 15px;
+    margin: 20px 3px;
+    color: $color-gray-wg;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+  }
+}

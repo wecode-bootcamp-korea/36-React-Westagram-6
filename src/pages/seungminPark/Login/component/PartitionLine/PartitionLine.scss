@@ -1,0 +1,12 @@
+@import '/src/pages/seungminPark/styles/variables.scss';
+.partitionLine {
+  width: 100%;
+  height: 1px;
+  background-color: rgb($color-gray-gr, $color-gray-gr, $color-gray-gr);
+  &:nth-child(1) {
+    margin-left: 40px;
+  }
+  &:nth-child(3) {
+    margin-right: 40px;
+  }
+}

@@ -1,0 +1,47 @@
+@import '/src/pages/seungminPark/styles/variables.scss';
+
+.posting {
+  .postNew {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 470px;
+    height: 120px;
+    margin-top: 26px;
+    background-color: $color-light-wt;
+    border: 1px solid rgb($color-gray-gr, $color-gray-gr, $color-gray-gr);
+    border-radius: 8px;
+
+    .postNewProfile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 75px;
+      height: 100px;
+      margin-left: 20px;
+      background-color: $color-light-wt;
+
+      .postNewProfileIcon {
+        width: 70px;
+        height: 70px;
+        background-color: $color-light-wt;
+        background-image: url('https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80');
+        background-size: 180px;
+        background-repeat: no-repeat;
+        background-position: -55px -15px;
+        border-radius: 37.5px;
+      }
+      .postNewProfileId {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 75px;
+        height: 30px;
+        background-color: $color-light-wt;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import '/src/pages/seungminPark/styles/variables.scss';
+.loginComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-light-wt;
+  input {
+    width: 268px;
+    height: 38px;
+    margin-bottom: 6px;
+    border: none;
+    background-color: $color-dark-wt;
+    border-radius: 3px;
+    &:focus {
+      border: 1px solid rgb($color-dark-gr, $color-dark-gr, $color-dark-gr);
+      outline: none;
+    }
+  }
+
+  .loginSubmit {
+    width: 268px;
+    height: 30px;
+    margin: 8px 40px;
+    color: $color-light-wt;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .loginAble {
+    background-color: $color-blue-bt;
+  }
+  .loginDisable {
+    background-color: rgba(0, 149, 246, 0.3);
+  }
+}
