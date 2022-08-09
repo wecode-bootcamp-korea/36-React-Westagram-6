@@ -48,8 +48,7 @@ const MainBitna = () => {
         <div className="wrap">
           {feedList.map((item, idx) => {
             return (
-              <div className="feeds">
-                {console.log(item)}
+              <div className="feeds" key={idx}>
                 <article className="article">
                   <div className="contentTop">
                     <div className="profileBox">
