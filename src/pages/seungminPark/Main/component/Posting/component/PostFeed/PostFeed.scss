@@ -1,0 +1,130 @@
+@import '/src/pages/seungminPark/styles/variables.scss';
+
+.postFeed {
+  width: 470px;
+  border-radius: 8px;
+  margin-top: 15px;
+  border: 1px solid rgb($color-gray-gr, $color-gray-gr, $color-gray-gr);
+  background-color: $color-light-wt;
+
+  .postFeedHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    background-color: $color-light-wt;
+    border-radius: 8px 8px 0 0;
+
+    .feedHeaderProfile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 420px;
+      height: 100%;
+      background-color: $color-light-wt;
+      border-radius: 8px 0 0 0;
+
+      .feedHeaderIcon {
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: 16px;
+        }
+      }
+      .feedHeaderId {
+        width: 370px;
+        padding-top: 5px;
+        padding-left: 10px;
+        background-color: $color-light-wt;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.1px;
+      }
+    }
+
+    .feedHeaderFunction {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 50px;
+      height: 56px;
+      background-color: $color-light-wt;
+      border-radius: 0 8px 0 0;
+    }
+  }
+
+  .feedImage {
+    width: 100%;
+    height: 300px;
+    img {
+      width: 100%;
+      height: 300px;
+    }
+  }
+
+  .feedFunctionSection {
+    .feedFunctions {
+      display: flex;
+      justify-content: space-between;
+      background-color: $color-light-wt;
+
+      .feedFunctionContents {
+        display: flex;
+        width: 168px;
+        height: 40px;
+        background-color: $color-light-wt;
+
+        .feedFunctionContentsItems {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 24px;
+          height: 24px;
+          margin: 8px;
+          background-color: $color-light-wt;
+          .postLike {
+            color: red;
+          }
+        }
+      }
+
+      .feedFunctionClip {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        margin: 8px;
+        background-color: $color-light-wt;
+      }
+    }
+  }
+
+  .feedLike {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding-left: 8px;
+    background-color: $color-light-wt;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .feedAuthor {
+    margin: 10px 0 0 8px;
+    background-color: $color-light-wt;
+    span {
+      background-color: $color-light-wt;
+      &:nth-child(1) {
+        font-weight: bold;
+      }
+      &:nth-child(2) {
+        margin-left: 10px;
+      }
+    }
+  }
+}
