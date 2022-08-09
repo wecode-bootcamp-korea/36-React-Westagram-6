@@ -1,7 +1,7 @@
 import React from 'react';
-import './Login.scss';
 import LoginComponent from './component/LoginComponent/LoginComponent';
 import PartitionLine from './component/PartitionLine/PartitionLine';
+import './Login.scss';
 
 const LoginSeungmin = () => {
   return (

@@ -42,7 +42,6 @@ const AppendComments = () => {
         />
         <button
           disabled={disable}
-          type="submit"
           className={disable ? 'buttonDisable' : 'buttonAble'}
         >
           게시
