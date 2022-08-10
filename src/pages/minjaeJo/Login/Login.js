@@ -37,7 +37,6 @@ const Login = () => {
     const checkLogin = response => {
       if (!response.ok) {
         throw new Error('상태 코드 에러 발생!');
-        alert('가입된 회원이 아닙니다');
       } else {
         navigate('/main-minjae');
       }
