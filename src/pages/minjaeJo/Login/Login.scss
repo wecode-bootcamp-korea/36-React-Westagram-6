@@ -1,0 +1,70 @@
+@import '/src/styles/variables.scss';
+
+.login {
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $grey-20;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  #title {
+    font-family: Lobster;
+    font-size: 50px;
+    margin: 50px 0;
+  }
+
+  #login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      width: 300px;
+      background-color: whitesmoke;
+      font-size: 16px;
+      border: 1px solid $grey-20;
+      border-radius: 5px;
+      padding: 15px 10px;
+      margin-bottom: 5px;
+
+      &::placeholder {
+        color: $grey-40;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: $grey-40;
+      }
+    }
+
+    #login_btn,
+    #signup_btn {
+      width: 300px;
+      font-size: 17px;
+      color: white;
+      background-color: blue;
+      border-radius: 5px;
+      padding: 8px 0;
+      margin-top: 10px;
+    }
+
+    .loginYes {
+      opacity: 1;
+    }
+
+    .loginNo {
+      opacity: 0.1;
+    }
+
+    a {
+      color: #385e87;
+      margin-top: 100px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import '/src/styles/variables.scss';
+
+.feed__comment {
+  margin-bottom: 5px;
+
+  .feed__comment--content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .comment__text {
+      font-size: 14px;
+      margin: 0 10px;
+    }
+  }
+}

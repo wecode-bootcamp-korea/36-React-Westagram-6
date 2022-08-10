@@ -1,8 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import NavbarMain from './components/NavbarMain/NavbarMain';
-
 import LoginSeungmin from './pages/seungminPark/Login/Login';
 import MainSeungmin from './pages/seungminPark/Main/Main';
 
@@ -15,7 +13,6 @@ import MainMinjae from './pages/minjaeJo/Main/Main';
 const Router = () => {
   return (
     <BrowserRouter>
-      <NavbarMain />
       <Routes>
         <Route path="/login-seungmin" element={<LoginSeungmin />} />
         <Route path="/main-seungmin" element={<MainSeungmin />} />
