@@ -1,8 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-//import NavbarMain from './components/NavbarMain/NavbarMain';
-
 import LoginSeungmin from './pages/seungminPark/Login/Login';
 import MainSeungmin from './pages/seungminPark/Main/Main';
 

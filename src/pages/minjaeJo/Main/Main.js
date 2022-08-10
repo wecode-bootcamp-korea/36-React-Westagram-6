@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import NavMinjae from '../../../components/NavMinjae/NavMinjae';
 import Feed from '../../../components/Feed/Feed';
 import Footer from '../../../components/Footer/Footer';
 import './Main.scss';
@@ -10,38 +11,15 @@ const Main = () => {
     fetch('http://localhost:3000/data/minjaeJo/feedData.json', {
       method: 'GET',
     })
-      .then(res => res.json())
+      .then(response => response.json())
       .then(data => {
         setFeedList(data);
-        console.log(data);
       });
   }, []);
 
   return (
     <>
-      <div className="nav">
-        <nav className="navigation-bar">
-          <div className="navigation-bar__column">
-            <i className="fab fa-instagram" />
-            <div className="navigation-bar__divider" />
-            <span className="navigation-bar__title">Westagram</span>
-          </div>
-          <div className="navigation-bar__column">
-            <i className="fas fa-search" />
-            <input
-              className="navigation-bar__search"
-              type="text"
-              placeholder="검색"
-            />
-          </div>
-          <div className="navigation-bar__column">
-            <img alt="나침반" src="/images/minjaeJo/explore.png" />
-            <img alt="하트" src="/images/minjaeJo/heart.png" />
-            <img alt="내정보" src="/images/minjaeJo/profile.png" />
-            <div className="red-dot" />
-          </div>
-        </nav>
-      </div>
+      <NavMinjae />
 
       <main className="main">
         <div className="feeds">

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Comment from '../Comment/Comment';
 import './Feed.scss';
 
-const Feed = props => {
+const Feed = ({ feed }) => {
   const [comment, setComment] = useState('');
   const [commentList, setCommentList] = useState([]);
   const postActive = comment.length > 0;
@@ -21,14 +21,14 @@ const Feed = props => {
     <article className="feed">
       <div className="feed__header">
         <div className="feed__user">
-          <img className="profile-img" src={props.feed.userImg} alt="죠르디" />
-          <span className="user-ID feed_user-ID">{props.feed.userID}</span>
+          <img className="profile-img" src={feed.userImg} alt="죠르디" />
+          <span className="user-ID feed_user-ID">{feed.userID}</span>
         </div>
         <i className="fas fa-ellipsis-h" />
       </div>
 
       <div className="feed__img">
-        <img alt="남극" src={props.feed.feedImg} />
+        <img alt="남극" src={feed.feedImg} />
       </div>
 
       <div className="feed__btns">
@@ -49,8 +49,8 @@ const Feed = props => {
       </div>
 
       <div className="feed__info">
-        <span className="user-ID">{props.feed.userID}</span>
-        <span className="feed__text">{props.feed.feedText}</span>
+        <span className="user-ID">{feed.userID}</span>
+        <span className="feed__text">{feed.feedText}</span>
       </div>
 
       <ul className="feed__comment-list">
