@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import NavbarMain from '../../../components/NavbarMain/NavbarMain';
 import './Main.scss';
-import CommentBox from './CommentBox';
 import StoryCommand from './StoryCommand';
-import Comment from './Comment';
-// import Comment from './Comment';
+import FeedBottom from './FeedBottom';
 
 const array = [
   '소개',
@@ -22,13 +20,6 @@ const array = [
 ];
 
 const MainBitna = () => {
-  const [commentArr, setCommentArr] = useState([]);
-
-  function addComnnet(data) {
-    setCommentArr(prevData => {
-      return [...prevData, data];
-    });
-  }
   const [feedList, setFeedList] = useState([]);
   useEffect(() => {
     fetch('/data/bitnaData.json')
@@ -68,40 +59,7 @@ const MainBitna = () => {
 
                   <img src={item.feedImg} alt="" />
 
-                  <div className="contentBottom">
-                    <div className="contentIcon">
-                      <div className="iconBox">
-                        <button type="button">
-                          <img src="/images/bitnalee/like.png" alt="" />
-                        </button>
-                        <button type="button">
-                          <img src="/images/bitnalee/comment.png" alt="" />
-                        </button>
-                        <button type="button">
-                          <img src="images/bitnalee/dm.png" alt="" />
-                        </button>
-                      </div>
-
-                      <button type="button" className="link">
-                        <img src="/images/bitnalee/share.png" alt="" />
-                      </button>
-                    </div>
-
-                    <div className="userBox">
-                      <img src={item.userImg} alt="" />
-                      <span className="text">
-                        <strong>{item.userName}</strong>님 외{' '}
-                        <strong>{item.userLike}</strong>이 좋아합니다.
-                      </span>
-                      <ul className="addUl">
-                        {commentArr.map(function (item, idx) {
-                          return <Comment text={item} key={idx} />;
-                        })}
-                      </ul>
-                    </div>
-
-                    <CommentBox updateData={addComnnet} />
-                  </div>
+                  <FeedBottom item={item} />
                 </article>
               </div>
             );
